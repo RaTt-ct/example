@@ -1,0 +1,45 @@
+<?php
+
+    class bdconnect{
+        private $connect;
+        function(){
+            require_once 'dbconnect.php';
+            header('Content-Type: text/html; charset=utf-8');
+            try {
+                $this->dbh = new PDO('mysql:dbname='.DB_NAME.';host='.DB_HOST.';charset=utf8mb4', DB_USERNAME, DB_PASSWORD);
+            } catch (PDOException $e) {
+                die($e->getMessage());
+            }
+        }
+    }
+    
+
+    class dbOperation{
+        private $dbcon;
+        function connect(){
+            require_once 'dbconnect.php';
+            require_once 'classphp.php';
+            $db = new bdconnect();
+            $this->conn=$db->connect();
+            
+        } 
+        function getClient(){
+            $sql = 'select * from db where id = :id ';
+            $request = $this->conn->prepare($sql);
+            $request->bindValue(':id','10',PDO::PARAM_STR);
+            $request->execute();
+            $claimed = $request->fetchAll(PDO::FETCH_ASSOC);
+            if($claimed){
+                print_r($claimed['id']);
+            }
+            //print_r($request->errorInfo());
+            //PDO::FETCH_ASSOC -вы
+        }
+    }
+    
+
+    define('DB_USERNAME', 'localhost');
+    define('DB_PASSWORD', 'j990508');
+    define('DB_HOST', 'r12341234');
+    define('DB_NAME', 'j990508');
+    
