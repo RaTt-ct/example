@@ -1,0 +1,90 @@
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+header{
+    margin: auto;
+    background-image: url(../img/background-header.jpg);
+    width: 100%;
+    min-height: 150px;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+.header-menu{
+    display: flex;
+}
+.header-navigation-list{
+    width: 820px;
+    margin: 0 0 0 8.5%;
+    display: flex;
+    padding: 46px 0 0 0;
+    justify-content: space-around;
+    font-size: 14px;
+    color: #fff;
+    list-style-type: none;
+    font-weight: 500;
+}
+
+.header-logo{
+ 
+    padding: 31px 0 0 0;
+    margin: 0 0 0 19.67%;
+    display: flex;
+}
+.header-logo-text{
+    margin: 10px 0 0 0;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    font-size: 28px;
+    color: #fff;
+}
+.header-cart{
+    margin: 0 0 0 63px;
+    padding: 41px 0 0 0;
+}
+.header-search{
+    margin: 0 0 0 28px;
+    padding: 41px 0 0 0;
+}
+.header-slogan{
+    padding: 0;
+    text-align: center;
+    margin: 257px auto;
+    width: 589px;
+    color: #fff;
+}
+.header-slogan-h2{
+    margin: 0;
+    padding: 0;
+    font-size: 34px;
+    font-weight: 400;;
+}
+.header-slogan-title{
+    margin: 0;
+    padding: 0;
+    font-size: 48px;
+}
+.header-slogan-btn{
+    margin: 52px 0 0 0;
+    padding: 21px 39px 21px 37px;
+    border-radius: 4%;
+    background-image: url(../img/button.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    border: none
+}
+.header-slogan-circle{
+    margin: 329px 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-slogan-circle-svg:nth-child(2){
+    margin: -35px 10px 0 0;
+}
+.header-slogan-circle-svg{
+    margin: 0 10px 40px 0;
+}
